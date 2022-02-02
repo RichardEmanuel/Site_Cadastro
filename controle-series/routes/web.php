@@ -35,7 +35,7 @@ Route::get('/series', function(){
     }
     $html .= "</ul>";
 
-    echo $html;
+    return $html;
     
         
 });
