@@ -1,6 +1,6 @@
 <?php
 
-/*AQUI ESTA NOSSO CONTROLADOR DO MOD 2*/
+/*AQUI ESTA NOSSO CONTROLADOR DO MOD 2, DE MVC AQUI ESTA O C*/
 
 namespace App\Http\Controllers;
 
