@@ -23,25 +23,9 @@ Route::get('/', function () {
 /*MOD 2
 VAMOS APRENDER MVC -  padrão de arquitetura de software
 
-
+nesta aula vamos tirar a função da aqui e colocar no controller : SeriesController.php
 
 */
-Route::get('/series', function(){
-    // arrey de series, inciriando as series
-    $series = [
-      'Supernatural',
-      'Ordem na casa - MARIE KONDO',
-      'Black Mirror'
-    ];
-    // Montando um html para printar as series
-
-    $html = "<ul>";
-    foreach($series as $serie){
-        $html .= "<li>$serie</li>";
-    }
-    $html .= "</ul>";
-
-    return $html;
-    
+Route::get('/series',
         
 });
