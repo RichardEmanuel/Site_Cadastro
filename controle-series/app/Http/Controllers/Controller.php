@@ -1,5 +1,7 @@
 <?php
 
+/*AQUI ESTA NOSSO CONTROLADOR DO MOD 2*/
+
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
