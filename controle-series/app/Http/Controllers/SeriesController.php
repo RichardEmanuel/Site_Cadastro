@@ -32,4 +32,11 @@ class SeriesController extends Controller
     
         return view('series.index',compact('series'));
     }
+
+    //criando a função da nova rota de cadastro
+
+    
+    public function create(){
+        return view('series.create');
+    }
 }
