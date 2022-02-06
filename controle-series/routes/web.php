@@ -18,3 +18,5 @@ Site para controller : laravel.com/docs/5.8/controllers#reseource-controllers
 
 
 Route::get('/series','SeriesController@index');
+
+Route::get('/series/criar','SeriesController@create');

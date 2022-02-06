@@ -17,7 +17,7 @@
             <h1>Séries do Ricardinho</h1>
         </div>    
           
-        <a href="" class="btn btn-dark">Adicionar</a>
+        <a href="" class="btn btn-dark mb-2">Adicionar</a>
         
         <ul class="list-group">
             <?php foreach($series as $serie):?>
