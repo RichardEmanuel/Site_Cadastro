@@ -25,12 +25,11 @@ class SeriesController extends Controller
         ];
         // Montando um html para printar as series
     
-        $html = "<ul>";
-        foreach($series as $serie){
-            $html .= "<li>$serie</li>";
-        }
-        $html .= "</ul>";
+        /*
+        -> Vamos retornar uma View, assim tirarndo o html de jogo
+        */
+
     
-        return $html;
+        return view('series.index');
     }
 }
