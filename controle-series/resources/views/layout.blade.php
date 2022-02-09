@@ -11,19 +11,11 @@
 <body>
     
     <div class="container">
-        
-            
         <div class="h-100 p-5 text-white bg-dark rounded-3">
-            <h1>Séries do Ricardinho</h1>
-        </div>    
-          
-        <a href="/series/criar" class="btn btn-dark mb-2">Adicionar</a>
-        
-        <ul class="list-group">
-            <?php foreach($series as $serie):?>
-            <li class="list-group-item"><?=$serie;?></li>
-            <?php endforeach; ?>
-        </ul>
+            <h1>@yield('cabecalho')</h1>
+        </div>
+
+        @yield('conteudo')
     </div>
 </body>
 </html>
