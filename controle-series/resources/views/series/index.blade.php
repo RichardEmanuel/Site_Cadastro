@@ -1,10 +1,10 @@
 @extends('layout')
 @section('cabecalho')
-    
-@endsection
+
 Séries do Ricardinho
+@endsection
 
-
+@section('conteudo')
 <a href="/series/criar" class="btn btn-dark mb-2">Adicionar</a>
 
 <ul class="list-group">
@@ -12,3 +12,5 @@ Séries do Ricardinho
     <li class="list-group-item"><?=$serie;?></li>
     <?php endforeach; ?>
 </ul>
+
+@endsection
