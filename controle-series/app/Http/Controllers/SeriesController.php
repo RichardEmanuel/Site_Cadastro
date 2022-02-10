@@ -2,10 +2,11 @@
 //iniciando classe Series Controller
 
 namespace App\Http\Controllers;
+
 //o controlador do laravavel herda da classe Controllers
 
 use Illuminate\Http\Request;
-
+use App\Serie;
 //Adicionado função, retirada da web.php
 class SeriesController extends Controller
 {
@@ -38,5 +39,14 @@ class SeriesController extends Controller
     
     public function create(){
         return view('series.create');
+    }
+
+    public function store(Request $request)
+    {
+        $nome = $request->nome;
+        $serie = new Serie();
+        $serie->nome = $nome;
+        var_dump($serie->save());
+
     }
 }
