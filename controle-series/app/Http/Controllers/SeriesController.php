@@ -13,7 +13,7 @@ class SeriesController extends Controller
     
     public function index(Request $request) {
         //Vai buscar tudo que tem no meu banco de series
-        $series = Serie::all();
+        $series = Serie::query()->orderBy('nome')->get();
     
         return view('series.index',compact('series'));
     }
@@ -30,7 +30,7 @@ class SeriesController extends Controller
         
         $serie =  Serie::create($request->all());
 
-        return redirect();
+        return redirect ('/series');
         
     }
 }
