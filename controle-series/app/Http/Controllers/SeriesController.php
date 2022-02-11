@@ -12,24 +12,8 @@ class SeriesController extends Controller
 {
     
     public function index(Request $request) {
-        //-> Vamos exibir 
-        //echo $request->query('parametro');
-        //var_dump($request->query()); // retorna um arrey 
-        //exit();
-
-
-        // arrey de series, inciriando as series
-        $series = [
-          'Supernatural',
-          'Ordem na casa - MARIE KONDO',
-          'Black Mirror - test'
-        ];
-        // Montando um html para printar as series
-    
-        /*
-        -> Vamos retornar uma View, assim tirarndo o html de jogo
-        */
-
+        //Vai buscar tudo que tem no meu banco de series
+        $series = Serie::all();
     
         return view('series.index',compact('series'));
     }
@@ -44,9 +28,9 @@ class SeriesController extends Controller
     public function store(Request $request)
     {
         $nome = $request->nome;
-        $serie = new Serie();
-        $serie->nome = $nome;
-        var_dump($serie->save());
+        $serie =  Serie::create($request->all());
 
+        echo "Série com id {$serie->id} Criada: {$serie->nome}";
+        
     }
 }
