@@ -27,10 +27,10 @@ class SeriesController extends Controller
 
     public function store(Request $request)
     {
-        $nome = $request->nome;
+        
         $serie =  Serie::create($request->all());
 
-        echo "Série com id {$serie->id} Criada: {$serie->nome}";
+        return redirect();
         
     }
 }
