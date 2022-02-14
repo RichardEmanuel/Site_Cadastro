@@ -18,8 +18,9 @@ class SeriesController extends Controller
         ->get();
         
         $mensagem = $request->session()->get('mensagem');
+        
     
-        return view('series.index',compact('series'));
+        return view('series.index',compact('series','mensagem'));
     }
 
     //criando a função da nova rota de cadastro
@@ -36,7 +37,7 @@ class SeriesController extends Controller
         $request->session()
         ->put(
             'mensagem',
-            "Série {$serie->id} criada com sucesso{$serie->nome}"
+            "Série {$serie->id} criada com sucesso {$serie->nome}"
         );
 
         return redirect ('/series');
