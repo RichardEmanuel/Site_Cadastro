@@ -5,12 +5,16 @@ Séries do Ricardinho
 @endsection
 
 @section('conteudo')
+
+@if(!empty($mensagem))
     <div class="mt-2">
         <div class="alert alert-success">
             
             {{ $mensagem }}
         </div>
     </div>
+@endif
+
 <a href="/series/criar" class="btn btn-dark mb-2 mt-2">Adicionar</a>
 
 <ul class="list-group">
