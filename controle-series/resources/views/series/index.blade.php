@@ -21,7 +21,10 @@ Séries do Ricardinho
     @foreach($series as $serie)
         <li class="list-group-item">
             {{ $serie->nome }}
-            <form method="post" action="/series/remover">
+            <form method="post" action="/series/{{$serie->id}}"
+                  onsubmit="return confirm('Tem certeza que deseja excluir {{addslashes($serie->nome)}} ?')">
+                @csrf
+                @method('DELETE')
                 <button class="btn btn-danger">Excluir</button>
             </form>
         </li>

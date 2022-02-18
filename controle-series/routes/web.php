@@ -23,3 +23,5 @@ Route::get('/series/criar','SeriesController@create');
 
 //criar uma rota para postar os nomes das series
 Route::post('/series/criar','SeriesController@store');
+
+Route::delete('/series/{id}','SeriesController@destroy');
