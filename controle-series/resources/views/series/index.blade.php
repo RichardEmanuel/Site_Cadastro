@@ -25,7 +25,7 @@ Séries do Ricardinho
                   onsubmit="return confirm('Tem certeza que deseja excluir {{addslashes($serie->nome)}} ?')">
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-danger btn-sm">LIXO</button>
+                <button class="btn btn-danger btn-sm">DELETE</button>
             </form>
         </li>
     @endforeach
