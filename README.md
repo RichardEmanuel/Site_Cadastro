@@ -1,2 +1,2 @@
 # Site_Cadastro
-Um site de cadastro Básico em PHP
+Um site de cadastro Básico em PHP Usando laravel
